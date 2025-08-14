@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-counter-output.component',
+  selector: 'app-counter-output',
   standalone: false,
   templateUrl: './counter-output.component.html',
-  styleUrl: './counter-output.component.scss'
+  styleUrls: ['./counter-output.component.scss']
 })
-export class CounterOutputComponent {
+export class CounterOutputComponent implements OnInit{
+
+  @Input() counter!: number;
+  ngOnInit(): void {
+    
+  }
 
 }
