@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { decrement, increment, reset } from '../state/counter.action';
+import { counterState } from '../state/counter.state';
 
 @Component({
   selector: 'app-counter-button',
@@ -11,7 +12,7 @@ import { decrement, increment, reset } from '../state/counter.action';
 export class CounterButtonComponent implements OnInit {
 
 
-  constructor(private store: Store<{counter:{counter:0}}>){
+  constructor(private store: Store<{counter:counterState}>){
 
   }
   ngOnInit(): void {  }
