@@ -10,6 +10,10 @@ import { StoreModule } from '@ngrx/store';
 import{counterReducer} from './counter/state/counter.reducer';
 import { CostumCounterInput } from './counter/costum-counter-input/costum-counter-input'
 import { FormsModule } from '@angular/forms';
+import { Postlink } from './posts/postlink/postlink';
+import { RouterModule } from '@angular/router';
+import { HeaderModule } from './shared/component/header/header/header-module';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    StoreModule.forRoot({counter:counterReducer})
+    StoreModule.forRoot({counter:counterReducer}),
+    RouterModule,HeaderModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
